@@ -93,34 +93,34 @@ BEGIN
    stim_proc: process
    begin		
       -- hold reset state for 100 ns.
-		rst<='1';
-      wait for 100 ns;	
-		rst<='0';
+		rst<='1';						-- reset recebe 1 para aguardar o sistema ligar
+      wait for 100 ns;							-- espera 100ns	
+		rst<='0';						-- reset recebe 0
 
 		-- estímulos
-		S1<='0';							-- sensor de luz 1 sem detectar luz
-		S2<='0';							-- sensor de luz 2 sem detectar luz
+		S1<='0';						-- sensor de luz 1 sem detectar luz
+		S2<='0';						-- sensor de luz 2 sem detectar luz
 		FC1<='0';						-- sensor de fim de curso 1 sem detectar o final do curso
 		FC2<='0';						-- sensor de fim de curso 2 sem detectar o final do curso
-		wait for clock_period*25;
-		S1<='1';							-- sensor de luz 1 começa a detectar luz
-		wait for clock_period*50;
+		wait for clock_period*25;				-- espera 25 periodos de clock
+		S1<='1';						-- sensor de luz 1 começa a detectar luz
+		wait for clock_period*50;				-- espera 50 periodos de clock
 		FC2<='1';						-- fim de curso 2 detecta o final do curso
-		wait for clock_period*50;
-		FC1<='1';					   -- fim de curso 1 detecta o final do curso
+		wait for clock_period*50;				-- espera 50 periodos de clock
+		FC1<='1';					   	-- fim de curso 1 detecta o final do curso
 		FC2<='0';						-- fim de curso 2 deixa de detectar o final do curso
-		wait for clock_period*50;
-		S1<='0';							-- sensor de luz 1 deixa de detectar luz
-		S2<='1';							-- sensor de luz 2 começa a detectar luz
-		wait for clock_period*50;
+		wait for clock_period*50;				-- espera 50 periodos de clock
+		S1<='0';						-- sensor de luz 1 deixa de detectar luz
+		S2<='1';						-- sensor de luz 2 começa a detectar luz
+		wait for clock_period*50;				-- espera 50 periodos de clock
 		FC1<='0';						-- fim de curso 1 deixa de detectar o final do curso
 		FC2<='1';						-- fim de curso 2 detecta o final do curso
-		wait for clock_period*50;
+		wait for clock_period*50;				-- espera 50 periodos de clock
 		FC2<='0';						-- fim de curso 2 deixa de detectar o final do curso
-		wait for clock_period*50;
-		S1<='1';							-- sensor de luz 1 começa a detectar luz
+		wait for clock_period*50;				-- espera 50 periodos de clock
+		S1<='1';						-- sensor de luz 1 começa a detectar luz
 		
-      wait;
-   end process;
+      wait;								-- aguarda sem fazer mais nada
+   end process;								-- final de process
 
-END;
+END;									-- fim
