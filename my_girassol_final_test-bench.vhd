@@ -40,6 +40,7 @@ ARCHITECTURE hardware OF my_girassol_test_bench IS
     -- Component Declaration for the Unit Under Test (UUT)
  
     COMPONENT my_girassol
+	begin
     PORT(
          rst : IN  std_logic;
          clock : IN  std_logic;
@@ -49,7 +50,7 @@ ARCHITECTURE hardware OF my_girassol_test_bench IS
          FC2 : IN  std_logic;
          Motor : OUT  std_logic_vector(3 downto 0)
         );
-    --END COMPONENT my_girassol;
+    END COMPONENT my_girassol;
     
 
    --Inputs
