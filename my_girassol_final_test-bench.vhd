@@ -80,7 +80,7 @@ BEGIN
         );
 
    -- Clock process definitions
-   clock_process :process						-- inicio do proceso de clock
+   clock_process: process						-- inicio do proceso de clock
    begin
 		clock <= '0';
 		wait for clock_period/2;
