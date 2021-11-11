@@ -64,7 +64,7 @@ ARCHITECTURE hardware OF my_girassol_test_bench IS
    signal Motor : std_logic_vector(3 downto 0);
 
    -- Clock period definitions
-   constant clock_period : time := 20 ns; --clock de 50MHz
+   constant clock_period : time := 20 ns; 				--clock de 50MHz(conforme especificado no problema)
  
 BEGIN
  
@@ -80,17 +80,17 @@ BEGIN
         );
 
    -- Clock process definitions
-   clock_process :process
+   clock_process :process						-- inicio do proceso de clock
    begin
 		clock <= '0';
 		wait for clock_period/2;
 		clock <= '1';
 		wait for clock_period/2;
-   end process;
+   end process clock_process;						-- final do processo de clock
  
 
    -- Stimulus process
-   stim_proc: process
+   stim_proc: process							-- inicio do processo de estimulos
    begin		
       -- hold reset state for 100 ns.
 		rst<='1';						-- reset recebe 1 para aguardar o sistema ligar
@@ -121,6 +121,6 @@ BEGIN
 		S1<='1';						-- sensor de luz 1 começa a detectar luz
 		
       wait;								-- aguarda sem fazer mais nada
-   end process;								-- final de process
+   end process stim_proc;						-- final do processo de estímulos
 
 END;									-- fim
