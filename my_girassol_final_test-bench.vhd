@@ -49,7 +49,7 @@ ARCHITECTURE hardware OF my_girassol_test_bench IS
          FC2 : IN  std_logic;
          Motor : OUT  std_logic_vector(3 downto 0)
         );
-    END my_girassol;
+    END COMPONENT my_girassol;
     
 
    --Inputs
