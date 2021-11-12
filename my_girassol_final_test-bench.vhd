@@ -123,4 +123,4 @@ BEGIN
       wait;								-- aguarda sem fazer mais nada
    end process stim_proc;						-- final do processo de estímulos
 
-END ARCHITECTURE hardware;									-- fim
+END;									-- fim
