@@ -80,8 +80,8 @@ architecture hardware of my_girassol is				-- início da arquitetura
 	
 	with passos select					-- decodifica os passos
 		Motor <= "1010" when passo_1, 			-- Passo 1
-					"1001" when passo_2, 	-- Passo 2
-					"0101" when passo_3, 	-- Passo 3
-					"0110" when passo_4; 	-- Passo 4
+			 "1001" when passo_2, 			-- Passo 2
+			 "0101" when passo_3, 			-- Passo 3
+			 "0110" when passo_4; 			-- Passo 4
 
 end hardware;							-- final do hardware
