@@ -11,7 +11,7 @@
 --
 -- Project Name: my_girassol
 --
--- Autores: Adevair Vitório, Fábio Miranda, Maysa Batista, Robson Gross
+-- Autores: Adevair Vitório, Fábio Miranda, Marlon Costa, Maysa Batista, Robson Gross
 --
 -- Data: Outubro de 2021
 ----------------------------------------------------------------------------------
